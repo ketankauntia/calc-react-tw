@@ -1,6 +1,4 @@
-import React from 'react';
-
-function Buttons() {
+function Buttons({ onButtonClick }) {
   const buttonsArr = [
     'C',
     'DEL',
@@ -37,7 +35,7 @@ function Buttons() {
           buttonClasses += ' row-span-2';
         }
         return (
-          <button key={index} className={buttonClasses}>
+          <button key={index} className={buttonClasses} onClick={() => onButtonClick(value)}>
             {value}
           </button>
         );
